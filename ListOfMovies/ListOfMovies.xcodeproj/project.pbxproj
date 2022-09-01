@@ -10,8 +10,8 @@
 		9FA78EC928BF7C8F00F044EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA78EC728BF7C8F00F044EF /* CustomTableViewCell.swift */; };
 		9FA78ECA28BF7C8F00F044EF /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA78EC828BF7C8F00F044EF /* CustomTableViewCell.xib */; };
 		9FA78ECC28BF7EBA00F044EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA78ECB28BF7EBA00F044EF /* Model.swift */; };
-		9FA78ECE28BF7FD900F044EF /* MainTableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA78ECD28BF7FD900F044EF /* MainTableView + Extensions.swift */; };
 		9FA78ED028BF959E00F044EF /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA78ECF28BF959E00F044EF /* MovieModel.swift */; };
+		9FCF94F028C0F7CE00FDFF36 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF94EF28C0F7CE00FDFF36 /* NSObject+Extensions.swift */; };
 		9FD96FB128BF76A700B7D4B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD96FB028BF76A700B7D4B4 /* AppDelegate.swift */; };
 		9FD96FB328BF76A700B7D4B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD96FB228BF76A700B7D4B4 /* SceneDelegate.swift */; };
 		9FD96FB528BF76A700B7D4B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD96FB428BF76A700B7D4B4 /* ViewController.swift */; };
@@ -24,8 +24,8 @@
 		9FA78EC728BF7C8F00F044EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		9FA78EC828BF7C8F00F044EF /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		9FA78ECB28BF7EBA00F044EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		9FA78ECD28BF7FD900F044EF /* MainTableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTableView + Extensions.swift"; sourceTree = "<group>"; };
 		9FA78ECF28BF959E00F044EF /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		9FCF94EF28C0F7CE00FDFF36 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		9FD96FAD28BF76A700B7D4B4 /* ListOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD96FB028BF76A700B7D4B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD96FB228BF76A700B7D4B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,13 +47,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9FA78EC628BF7C5B00F044EF /* CustomCell */ = {
+		9FA78ED528BFD21D00F044EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9FA78ED628BFD22400F044EF /* MovieModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FA78ED628BFD22400F044EF /* MovieModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FA78ECF28BF959E00F044EF /* MovieModel.swift */,
+			);
+			path = MovieModel;
+			sourceTree = "<group>";
+		};
+		9FA78ED728BFD2FA00F044EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FCF94EF28C0F7CE00FDFF36 /* NSObject+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9FA78ED928BFD37600F044EF /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9FA78EDA28BFD38000F044EF /* TableViewCell */,
 				9FA78EC728BF7C8F00F044EF /* CustomTableViewCell.swift */,
 				9FA78EC828BF7C8F00F044EF /* CustomTableViewCell.xib */,
 			);
-			path = CustomCell;
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		9FA78EDA28BFD38000F044EF /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		9FD96FA428BF76A700B7D4B4 = {
@@ -75,10 +107,11 @@
 		9FD96FAF28BF76A700B7D4B4 /* ListOfMovies */ = {
 			isa = PBXGroup;
 			children = (
-				9FD96FC828BF76D600B7D4B4 /* MainScene */,
-				9FD96FC728BF76CB00B7D4B4 /* Storyboards */,
-				9FD96FC528BF76BE00B7D4B4 /* Resources */,
 				9FD96FC428BF76B100B7D4B4 /* UIApplication */,
+				9FD96FC528BF76BE00B7D4B4 /* Resources */,
+				9FD96FC728BF76CB00B7D4B4 /* Storyboards */,
+				9FA78ED528BFD21D00F044EF /* Models */,
+				9FD96FC828BF76D600B7D4B4 /* MainScene */,
 				9FD96FBE28BF76A800B7D4B4 /* Info.plist */,
 			);
 			path = ListOfMovies;
@@ -121,6 +154,8 @@
 		9FD96FC828BF76D600B7D4B4 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				9FA78ED928BFD37600F044EF /* UIComponents */,
+				9FA78ED728BFD2FA00F044EF /* Extension */,
 				9FD96FCA28BF76E400B7D4B4 /* ViewController */,
 				9FD96FC928BF76DE00B7D4B4 /* Model */,
 			);
@@ -131,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				9FA78ECB28BF7EBA00F044EF /* Model.swift */,
-				9FA78ECF28BF959E00F044EF /* MovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,9 +173,7 @@
 		9FD96FCA28BF76E400B7D4B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9FA78EC628BF7C5B00F044EF /* CustomCell */,
 				9FD96FB428BF76A700B7D4B4 /* ViewController.swift */,
-				9FA78ECD28BF7FD900F044EF /* MainTableView + Extensions.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -219,8 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA78ED028BF959E00F044EF /* MovieModel.swift in Sources */,
-				9FA78ECE28BF7FD900F044EF /* MainTableView + Extensions.swift in Sources */,
 				9FD96FB528BF76A700B7D4B4 /* ViewController.swift in Sources */,
+				9FCF94F028C0F7CE00FDFF36 /* NSObject+Extensions.swift in Sources */,
 				9FD96FB128BF76A700B7D4B4 /* AppDelegate.swift in Sources */,
 				9FA78EC928BF7C8F00F044EF /* CustomTableViewCell.swift in Sources */,
 				9FA78ECC28BF7EBA00F044EF /* Model.swift in Sources */,

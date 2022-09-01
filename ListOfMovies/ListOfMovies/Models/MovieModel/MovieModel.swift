@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct MovieModel {
-    var movieName: String
-    var movieYear: String
+enum Section {
+    case main
+}
+
+struct MovieModel: Hashable {
+    let name: String
+    let year: String
 }

@@ -9,12 +9,13 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     //MARK: Outlets
-    @IBOutlet weak var movieInfoLabel: UILabel!
-    @IBOutlet weak var movieYearLabel: UILabel!
+    @IBOutlet private weak var movieInfoLabel: UILabel!
+    @IBOutlet private weak var movieYearLabel: UILabel!
+    
     
     //MARK: Methods
-    func configureMovieCell(movieNameInfo: String, movieYearInfo: String) {
-        movieInfoLabel.text = movieNameInfo
-        movieYearLabel.text = movieYearInfo
+    func configure(with model: MovieModel) {
+        movieInfoLabel.text = model.name
+        movieYearLabel.text = model.year
     }
 }
