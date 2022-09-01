@@ -6,36 +6,30 @@
 //
 
 import Foundation
-import UIKit
 
 class Model {
-    
-    weak var view: AlertProvider?
-    var movieArray: [MovieModel] = []
-    var flag = 1
-    
-    func addNewText(_ nameText: String, _ yearText: String) {
-        if nameText == "" || yearText == "" {
-            view?.presentAlert("Please, fill out all fields")
-        } else {
-            let validation = validateRepeatFilm(nameText, yearText)
-
-            if validation {
-                let model = MovieModel(movieName: nameText, movieYear: yearText)
-                movieArray.append(model)
-            }
+    //MARK: Properties
+    private var movieArray: [MovieModel] = [] {
+        didSet {
+            view?.updateMovies(movieArray)
         }
     }
-}
-
-private extension Model {
-    func validateRepeatFilm(_ nameText: String, _ yearText: String) -> Bool {
-            for index in movieArray {
-                if index.movieName == nameText && index.movieYear == yearText {
-                    view?.presentAlert("Film is duplicate")
-                    movieArray.removeLast()
-                }
-            }
-            return true
+    
+    weak var view: View?
+    
+    //MARK: Methods
+    func addMovie(_ nameText: String, _ yearText: String) {
+        guard !nameText.isEmpty, !yearText.isEmpty else {
+            view?.presentAlert("Fields are empty")
+            return
+        }
+        
+        let film = MovieModel(name: nameText, year: yearText)
+        guard !movieArray.contains(film) else {
+            view?.presentAlert("You have already saved this one")
+            return
+        }
+        
+        movieArray.append(film)
     }
 }
