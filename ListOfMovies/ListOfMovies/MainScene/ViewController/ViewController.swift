@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import OrderedCollections
 
 protocol View: AnyObject {
     func presentAlert(_ text: String)
-    func updateMovies(_ movies: [MovieModel])
+    func updateMovies(_ movies: OrderedSet<MovieModel>)
 }
 
 class ViewController: UIViewController {
@@ -57,21 +58,22 @@ class ViewController: UIViewController {
         }
     }
     
-    private func applySnapshot(movies: [MovieModel]) {
+    private func applySnapshot(movies: OrderedSet<MovieModel>) {
         guard let dataSource = dataSource else { return }
         
         var snapshot = dataSource.snapshot()
         let section = Section.main
         snapshot.appendSections([section])
         
-        snapshot.appendItems(movies, toSection: section)
+        snapshot.appendItems(movies.elements, toSection: section)
+        
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
 
 //MARK: Extension
 extension ViewController: View {
-    func updateMovies(_ movies: [MovieModel]) {
+    func updateMovies(_ movies: OrderedSet<MovieModel>) {
         applySnapshot(movies: movies)
     }
     
