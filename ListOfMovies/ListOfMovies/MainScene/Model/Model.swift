@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import OrderedCollections
 
 class Model {
     //MARK: Properties
-    private var movieArray: [MovieModel] = [] {
+    private var movies: OrderedSet<MovieModel> = [] {
         didSet {
-            view?.updateMovies(movieArray)
+            guard movies != oldValue else {
+                view?.presentAlert("Dup")
+                return
+            }
+            view?.updateMovies(movies)
         }
     }
     
@@ -24,12 +29,7 @@ class Model {
             return
         }
         
-        let film = MovieModel(name: nameText, year: yearText)
-        guard !movieArray.contains(film) else {
-            view?.presentAlert("You have already saved this one")
-            return
-        }
-        
-        movieArray.append(film)
+        let movie = MovieModel(name: nameText, year: yearText)
+        movies.append(movie)
     }
 }
