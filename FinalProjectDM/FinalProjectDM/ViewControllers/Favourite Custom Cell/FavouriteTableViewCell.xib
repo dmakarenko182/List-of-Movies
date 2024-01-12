@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteTableViewCell" id="KGk-i7-Jjw" customClass="FavouriteTableViewCell" customModule="FinalProjectDM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twd" translatesAutoresizingMaskIntoConstraints="NO" id="iB1-1d-8rn">
+                        <rect key="frame" x="8" y="16" width="112" height="143"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="112" id="LPx-z1-Pj6"/>
+                            <constraint firstAttribute="height" constant="143" id="iLm-tj-BOB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="І мертві підуть" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-hr-MCp">
+                        <rect key="frame" x="136" y="16" width="168" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="hIe-RJ-q3i"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tv" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9O-vo-n6m">
+                        <rect key="frame" x="136" y="76" width="184" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="NH5-0a-bSN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqK-kJ-eka">
+                        <rect key="frame" x="136" y="132" width="152" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="7yz-Uk-r4q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-lI-IIg">
+                        <rect key="frame" x="8" y="175" width="304" height="91"/>
+                        <string key="text">Після страшної хвороби, яка перетворила жителів Землі в зомбі, невелика група поки ще живих людей день у день бореться за виживання в новому, ворожому світі. Під проводом колишнього поліцейського Ріка вони шукають безпечне для життя місце, але зомбі - це не найстрашніше, що їх чекає, основна небезпека - це жорстоке внутрішнє суперництво серед тих, що вижили.</string>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xcw-hr-MCp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1BR-n9-4Ww"/>
+                    <constraint firstItem="kqK-kJ-eka" firstAttribute="top" secondItem="X9O-vo-n6m" secondAttribute="bottom" constant="8" id="1Ca-wI-j6v"/>
+                    <constraint firstAttribute="trailing" secondItem="Xcw-hr-MCp" secondAttribute="trailing" constant="16" id="4E3-Wt-o2e"/>
+                    <constraint firstItem="hiq-lI-IIg" firstAttribute="top" secondItem="iB1-1d-8rn" secondAttribute="bottom" constant="16" id="54b-71-uPt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kqK-kJ-eka" secondAttribute="trailing" constant="16" id="Bfq-Eg-Vvm"/>
+                    <constraint firstItem="iB1-1d-8rn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KZi-zH-32H"/>
+                    <constraint firstItem="iB1-1d-8rn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="L0h-1f-NL7"/>
+                    <constraint firstItem="Xcw-hr-MCp" firstAttribute="leading" secondItem="iB1-1d-8rn" secondAttribute="trailing" constant="16" id="LLX-PW-kxE"/>
+                    <constraint firstItem="X9O-vo-n6m" firstAttribute="leading" secondItem="iB1-1d-8rn" secondAttribute="trailing" constant="16" id="SCC-Qb-dD2"/>
+                    <constraint firstItem="X9O-vo-n6m" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="16" id="YlN-Xt-Yfh"/>
+                    <constraint firstAttribute="trailing" secondItem="hiq-lI-IIg" secondAttribute="trailing" constant="8" id="ZKW-0t-hHp"/>
+                    <constraint firstItem="X9O-vo-n6m" firstAttribute="top" secondItem="Xcw-hr-MCp" secondAttribute="bottom" constant="8" id="d2L-EV-JJZ"/>
+                    <constraint firstItem="hiq-lI-IIg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gTI-Id-UrJ"/>
+                    <constraint firstAttribute="bottom" secondItem="hiq-lI-IIg" secondAttribute="bottom" constant="16" id="n3s-by-NmO"/>
+                    <constraint firstItem="kqK-kJ-eka" firstAttribute="leading" secondItem="iB1-1d-8rn" secondAttribute="trailing" constant="16" id="zgn-cI-BTE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avarageRatingLabel" destination="kqK-kJ-eka" id="yK7-89-PDb"/>
+                <outlet property="mediaTypeLabel" destination="X9O-vo-n6m" id="qPw-EG-Tpg"/>
+                <outlet property="overviewSavedlabel" destination="hiq-lI-IIg" id="Hfx-Iw-Qd3"/>
+                <outlet property="posterSavedView" destination="iB1-1d-8rn" id="KaF-LI-IIQ"/>
+                <outlet property="titleSavedLabel" destination="Xcw-hr-MCp" id="JsO-Fd-phf"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="59.598214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="twd" width="1280" height="1897"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
